@@ -8,6 +8,8 @@ first_line_match: "-[*]-( Mode:)? Odin -[*]-"
 scope: source.odin
 variables:
   identifier: '[A-Za-z_][A-Za-z0-9_]*'
+  loweridentifier: '\b[_]*[a-z][a-zA-Z0-9_]*\b'
+  upperidentifier: '\b[_]*[A-Z][a-zA-Z0-9_]*\b'
   type_chars: '[[:alnum:]\s,._^<>\[\]-]'
   screaming_identifier: '\b[A-Z_](?![a-z])[A-Z_0-9]+\b'
 
@@ -251,3 +253,16 @@ contexts:
       scope: constant.character.escape.odin
     - match: \\.
       scope: invalid.illegal.unknown-escape.odin
+
+  variables:
+    - match: '(\.)({{identifier}})(\()'
+      captures:
+        1: keyword.operator.odin
+        2: variable.function.odin
+        3: punctuation.odin
+    - match: '(\.)({{identifier}})'
+      captures:
+        1: keyword.operator.odin
+        2: variable.other.member.odin
+    # - match: '{{loweridentifier}}'
+    #   scope: variable.name.odin

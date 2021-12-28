@@ -255,6 +255,8 @@ contexts:
       scope: constant.character.escape.odin
     - match: \\.
       scope: invalid.illegal.unknown-escape.odin
+    - match: '%(\d*[vsqxid])'
+      scope: constant.character.escape.format.odin
 
   variables:
     - match: '(\.)({{identifier}})(\()'

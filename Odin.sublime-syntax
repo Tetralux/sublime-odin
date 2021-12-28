@@ -169,6 +169,8 @@ contexts:
       captures:
         1: meta.constant.odin, support.constant.odin entity.name.type.odin
         2: keyword.operator.odin
+    - match: '(\.|\(|\)|\[|\]|\{|\})'
+      scope: punctuation.odin
     # - match: '\b({{identifier}})\s*((,)\s*({{identifier}}))*\s*(?:(:=?)|(\s+in))'
     #   captures:
     #     1: variable.parameter.odin

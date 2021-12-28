@@ -187,18 +187,21 @@ contexts:
         1: punctuation.definition.brackets.begin.odin
         2: constant.numeric.odin
         3: punctuation.definition.brackets.end.odin
-    - include: basic-types
     - match: '\$\s*({{identifier}})'
       scope: storage.type.odin
+    - match: '{{upperidentifier}}'
+      scope: support.type.odin
 
   basic-types:
     - match: '\b(i8|i16|i32|i64|i128|int)\b'
       scope: storage.type.odin
     - match: '\b(u8|u16|u32|u64|u128|uint|uintptr)\b'
       scope: storage.type.odin
-    - match: '\b(f16|f32|f64)\b'
+    - match: '\b((f16)|((f32|f64)(le|be)?))\b'
       scope: storage.type.odin
-    - match: '\b(complex32|complex64|complex128)\b'
+    - match: '\b(complex|complex32|complex64|complex128)\b'
+      scope: storage.type.odin
+    - match: '\b(quaternion|quaternion64|quaternion128|quaternion256)\b'
       scope: storage.type.odin
     - match: '\b(bool|b8|b16|b32|b64)\b'
       scope: storage.type.odin

@@ -17,11 +17,13 @@ contexts:
 
   global:
     - include: comments
-    - include: types
     - include: literals
-    - include: operators
     - include: keywords
+    - include: basic-types
     - include: functions-and-declarations
+    - include: types
+    - include: variables
+    - include: operators
     - include: strings
     - include: string-escaped-char
     # - include: custom_styling
@@ -97,17 +99,17 @@ contexts:
     - match: \b(asm|yield|await)\b
       scope: keyword.control.odin
     - match: \b(distinct|opaque)\b
-      scope: storage.type.odin
+      scope: keyword.type.odin
     - match: \b(context)\b
-      scope: keyword.control.odin
+      scope: keyword.other.odin
     - match: \b(var|macro|struct|enum|union|map|set|bit_field|bit_set|typeid)\b
-      scope: storage.type.odin
+      scope: keyword.type.odin
     - match: \b(cast|transmute|auto_cast)\b
-      scope: keyword.function.odin
+      scope: keyword.other.odin
     - match: ([@#]({{identifier}}))
-      scope: support.type.odin
+      scope: keyword.other.attribute.odin
     - match: '@(\()'
-      scope: support.type.odin
+      scope: keyword.other.attribute.odin
       push:
         - match: '\)'
           pop: true
@@ -123,7 +125,7 @@ contexts:
     - match: '\b({{identifier}})\s*(::)\s*(proc)'
       captures:
         1: meta.function.odin entity.name.function.odin
-        2: keyword.operator.odin
+        2: storage.modifier.odin
         3: keyword.control.odin
     - match: '\b({{identifier}})\s*(::)\s*(#force_inline|#force_no_inline)\s+(proc)'
       captures:

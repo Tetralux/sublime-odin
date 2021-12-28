@@ -92,8 +92,8 @@ contexts:
       scope: keyword.control.odin
     - match: \b(fallthrough|break|continue|case|vector|dynamic|static)\b
       scope: keyword.control.odin
-    - match: \b(using|inline|no_inline)\b
-      scope: storage.type.odin
+    - match: \b(using)\b
+      scope: keyword.control.odin
     - match: \b(asm|yield|await)\b
       scope: keyword.control.odin
     - match: \b(distinct|opaque)\b
@@ -125,7 +125,7 @@ contexts:
         1: meta.function.odin entity.name.function.odin
         2: keyword.operator.odin
         3: keyword.control.odin
-    - match: '\b({{identifier}})\s*(::)\s*(inline|no_inline)\s+(proc)'
+    - match: '\b({{identifier}})\s*(::)\s*(#force_inline|#force_no_inline)\s+(proc)'
       captures:
         1: meta.function.odin entity.name.function.odin
         2: keyword.operator.odin

@@ -203,6 +203,8 @@ contexts:
       scope: storage.type.odin
     - match: '\b(quaternion|quaternion64|quaternion128|quaternion256)\b'
       scope: storage.type.odin
+    - match: '\b(matrix)\b'
+      scope: storage.type.odin
     - match: '\b(bool|b8|b16|b32|b64)\b'
       scope: storage.type.odin
     - match: '\b(string|cstring|rune)\b'

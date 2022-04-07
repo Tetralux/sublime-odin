@@ -19,13 +19,13 @@ contexts:
 
   global:
     - include: comments
+    - include: operators
     - include: literals
     - include: keywords
     - include: basic-types
     - include: functions-and-declarations
     - include: types
     - include: variables
-    - include: operators
     - include: strings
     - include: string-escaped-char
     # - include: custom_styling
@@ -120,7 +120,11 @@ contexts:
         - include: operators
 
   operators:
-    - match: (::|:=?|\?|=|\*=?|/=?|\+=?|-=?|>=?|<=?|>>=?|<<=?|%=?|\^=?|\|=?|\|\|=?|&=?|&&=?|!=?|->|~=?|\.\.|!|\.)
+    - match: \.\.\<
+      scope: keyword.operator.odin
+    - match: \.\.=
+      scope: keyword.operator.odin
+    - match: (->|::|:=?|\?|=|\*=?|/=?|\+=?|-=?|>=?|<=?|>>=?|<<=?|%=?|\^=?|\|=?|\|\|=?|&=?|&&=?|!=?|~=?|\.\.|!)
       scope: keyword.operator.odin
 
   functions-and-declarations:

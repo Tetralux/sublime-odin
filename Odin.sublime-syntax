@@ -104,7 +104,7 @@ contexts:
       scope: keyword.type.odin
     - match: \b(context)\b
       scope: keyword.other.odin
-    - match: \b(var|macro|struct|enum|union|map|set|bit_field|bit_set|typeid)\b
+    - match: \b(var|macro|struct|enum|union|map|bit_field|bit_set|typeid)\b
       scope: keyword.type.odin
     - match: \b(cast|transmute|auto_cast)\b
       scope: keyword.other.odin

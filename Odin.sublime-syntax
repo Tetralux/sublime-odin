@@ -90,21 +90,21 @@ contexts:
   keywords:
     - match: '\b(_)\b'
       scope: keyword.control.discard.odin
-    - match: \b(import|export|foreign|package)\b
+    - match: \b(import|foreign|package)\b
       scope: keyword.other.odin
-    - match: \b(if|else|when|where|for|in|not_in|defer|switch|return|const|do|try|or_else|or_return)\b
+    - match: \b(if|else|when|where|for|in|not_in|defer|switch|return|do|try|or_else|or_return)\b
       scope: keyword.control.odin
-    - match: \b(fallthrough|break|continue|case|vector|dynamic|static)\b
+    - match: \b(fallthrough|break|continue|case|dynamic)\b
       scope: keyword.control.odin
     - match: \b(using)\b
       scope: keyword.control.odin
-    - match: \b(asm|yield|await)\b
+    - match: \b(asm)\b
       scope: keyword.control.odin
     - match: \b(distinct|opaque)\b
       scope: keyword.type.odin
     - match: \b(context)\b
       scope: keyword.other.odin
-    - match: \b(var|macro|struct|enum|union|map|bit_field|bit_set|typeid)\b
+    - match: \b(struct|enum|union|map|bit_set|typeid)\b
       scope: keyword.type.odin
     - match: \b(cast|transmute|auto_cast)\b
       scope: keyword.other.odin
@@ -143,7 +143,7 @@ contexts:
       captures:
         1: keyword.function.odin
         2: punctuation.odin
-    - match: (proc|macro)\s*(\()
+    - match: (proc)\s*(\()
       captures:
         1: keyword.control.odin
         2: punctuation.odin
@@ -159,7 +159,7 @@ contexts:
       captures:
         1: meta.function-call.odin variable.function.odin
         3: punctuation.odin
-    - match: '\b({{identifier}})\s*(::)\s*(struct|union|enum|bit_field|bit_set)'
+    - match: '\b({{identifier}})\s*(::)\s*(struct|union|enum|bit_set)'
       captures:
         1: meta.type.odin entity.name.type.odin
         2: keyword.operator.odin
@@ -184,7 +184,7 @@ contexts:
     #     6: keyword.control.odin
 
   types:
-    - match: '\b(struct|enum|union|bit_field|bit_set)\b(?:(\{)(\}))?'
+    - match: '\b(struct|enum|union|bit_set)\b(?:(\{)(\}))?'
       captures:
         1: storage.type.odin
         2: meta.block.odin, punctuation.definition.block.begin.odin

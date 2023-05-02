@@ -158,7 +158,7 @@ contexts:
       captures:
         1: keyword.control.odin
         2: punctuation.odin
-    - match: \b(?<!\.)(len|cap|make|delete|delete_key|new(?:_clone)?|free(?:_all)?|clear|reserve|resize|append|append_string|append_nothing|insert_at|map_insert|min|max|clamp|raw_data|copy|pop|pop_safe|pop_front|pop_front_safe|(?:un)?ordered_remove|remove_range)(\()
+    - match: \b(?<!\.)(len|cap|make|delete|delete_key|new(?:_clone)?|free(?:_all)?|clear|reserve|resize|append|append_string|append_nothing|inject_at|assign_at|map_insert|min|max|clamp|raw_data|copy|pop|pop_safe|pop_front|pop_front_safe|(?:un)?ordered_remove|remove_range)(\()
       captures:
         1: support.function.odin
         2: punctuation.odin

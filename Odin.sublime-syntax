@@ -118,6 +118,17 @@ contexts:
           scope: keyword.other.tag.odin
         - include: literals
         - include: operators
+    - match: '({{identifier}})(\.)({{identifier}})(?:(\.)({{identifier}}))*'
+      captures:
+        1: variable.other.odin
+        3: variable.other.odin
+        5: variable.other.odin
+    - match: '(\)|\]|\})(\.)({{identifier}})'
+      captures:
+        1: source.odin
+        3: variable.other.odin
+    - match: '(\.{{identifier}})'
+      scope: constant.numeric.odin
 
   operators:
     - match: \.\.\<
@@ -268,9 +279,9 @@ contexts:
         1: keyword.operator.odin
         2: variable.function.odin
         3: punctuation.odin
-    - match: '(\.)({{identifier}})'
+    - match: '(\.)?({{identifier}})'
       captures:
         1: keyword.operator.odin
-        2: variable.other.member.odin
+        2: variable.odin
     # - match: '{{loweridentifier}}'
     #   scope: variable.name.odin

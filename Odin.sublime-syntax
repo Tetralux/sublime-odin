@@ -135,7 +135,7 @@ contexts:
       scope: keyword.operator.odin
     - match: \.\.=
       scope: keyword.operator.odin
-    - match: (->|\!=|==|::|:=?|\?|=|\*=?|/=?|\+=?|-=?|>=?|<=?|>>=?|<<=?|%=?|\^=?|\|=?|\|\|=?|&=?|&&=?|!=?|~=?|\.\.|!)
+    - match: (->|\!=|==|::|:=?|\?|=|\*=?|/=?|\+=?|-=?|<<=?|>>=?|>=?|<=?|%=?|\^=?|\|=?|\|\|=?|&=?|&&=?|!=?|~=?|\.\.|!)
       scope: keyword.operator.odin
 
   functions-and-declarations:

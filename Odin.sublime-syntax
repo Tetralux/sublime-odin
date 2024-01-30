@@ -128,9 +128,10 @@ contexts:
     - match: '(\)|\]|\})(\.)({{identifier}})'
       captures:
         1: source.odin
-        3: variable.other.odin
-    - match: '(\.{{identifier}})'
-      scope: constant.numeric.odin
+        3: variable.odin
+    - match: '(\s+)(\.{{identifier}})'
+      captures:
+        2: constant.numeric.arc
 
   operators:
     - match: \.\.\<

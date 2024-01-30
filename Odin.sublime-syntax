@@ -92,7 +92,7 @@ contexts:
       scope: keyword.control.discard.odin
     - match: \b(import|foreign|package)\b
       scope: keyword.other.odin
-    - match: \b(if|else|when|where|for|in|not_in|defer|switch|return|do|try|or_else|or_return)\b
+    - match: \b(if|else|when|where|for|in|not_in|defer|switch|return|do|try|or_else|or_return|or_break|or_continue)\b
       scope: keyword.control.odin
     - match: \b(fallthrough|break|continue|case|dynamic)\b
       scope: keyword.control.odin

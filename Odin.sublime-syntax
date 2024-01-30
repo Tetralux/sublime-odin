@@ -120,9 +120,11 @@ contexts:
         - include: operators
     - match: '({{identifier}})(\.)({{identifier}})(?:(\.)({{identifier}}))*'
       captures:
-        1: variable.other.odin
-        3: variable.other.odin
-        5: variable.other.odin
+        1: variable.odin
+        2: keyword.operator.odin
+        3: variable.odin
+        4: keyword.operator.odin
+        5: variable.odin
     - match: '(\)|\]|\})(\.)({{identifier}})'
       captures:
         1: source.odin

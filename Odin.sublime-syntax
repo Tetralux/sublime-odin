@@ -276,7 +276,7 @@ contexts:
     - match: \\.
       scope: invalid.illegal.unknown-escape.odin
     - match: '%(\d*[vsqxid])'
-      scope: constant.character.escape.format.odin
+      scope: constant.other.placeholder.odin
 
   variables:
     - match: '(\.)({{identifier}})(\()'

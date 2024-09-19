@@ -104,7 +104,7 @@ contexts:
       scope: keyword.type.odin
     - match: \b(context)\b
       scope: keyword.other.odin
-    - match: \b(struct|enum|union|map|bit_set|typeid)\b
+    - match: \b(struct|bit_field|enum|union|map|bit_set|typeid)\b
       scope: keyword.type.odin
     - match: \b(cast|transmute|auto_cast)\b
       scope: keyword.other.odin
@@ -175,7 +175,7 @@ contexts:
       captures:
         1: meta.function-call.odin variable.function.odin
         3: punctuation.odin
-    - match: '\b({{identifier}})\s*(::)\s*(struct|union|enum|bit_set)'
+    - match: '\b({{identifier}})\s*(::)\s*(struct|bit_field|union|enum|bit_set)'
       captures:
         1: meta.type.odin entity.name.type.odin
         2: keyword.operator.odin
@@ -200,7 +200,7 @@ contexts:
     #     6: keyword.control.odin
 
   types:
-    - match: '\b(struct|enum|union|bit_set)\b(?:(\{)(\}))?'
+    - match: '\b(struct|bit_field|enum|union|bit_set)\b(?:(\{)(\}))?'
       captures:
         1: storage.type.odin
         2: meta.block.odin, punctuation.definition.block.begin.odin

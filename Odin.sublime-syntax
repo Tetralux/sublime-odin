@@ -271,6 +271,11 @@ contexts:
           scope: punctuation.definition.string.end.odin
           pop: true
         - include: string-escaped-char
+    - match: ","
+      scope: punctuation.separator.odin
+    - match: ";"
+      scope: punctuation.terminator.odin
+
 
   string-escaped-char:
     - match: '\\(\\|[abefnrutv''"]|x\h{2}|u\h{4}|U\h{8}|[0-7]{3})'

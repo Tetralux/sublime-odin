@@ -67,7 +67,7 @@ contexts:
       scope: keyword.operator.odin
     - match: '(\&\&|\|\||\!)'
       scope: keyword.logic.odin
-    - match: '(\%|\+|\-|\*|\/|\:|\:\:|\:\=|\+\=|\*\=|\\\=|\=|\-\=|\=\=|\!\=|\<\=|\>\=|\<|\>|\.\.\<|\.\.\=|\?|\~|\||\&\~|\&\=|\|\=|\~=)'
+    - match: (->|\!=|==|::|:=?|\?|=|\*=?|/=?|\+=?|-=?|<<=?|>>=?|>=?|<=?|%=?|\^=?|\|=?|\|\|=?|&=?|&&=?|!=?|~=?|!)
       scope: keyword.operator.odin
     - match: \b(nil|true|false)\b
       scope: constant.language.odin
